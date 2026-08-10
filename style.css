@@ -1037,10 +1037,14 @@ button:hover {
 
     .envelope {
         width: 90vw;
+        max-width: 90vw;
+        box-sizing: border-box;
     }
 
     .letter-paper {
-        padding: 20px;
+        padding: 16px;
+        box-sizing: border-box;
+        width: 100%;
     }
 
     .letter-paper h2 {
@@ -1475,6 +1479,7 @@ button:hover {
         transform: scale(0.42);
         transform-origin: top center;
         margin-bottom: -340px;
+        margin-top: 70px;
     }
 
     #book-wrapper {
