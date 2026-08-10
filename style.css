@@ -301,6 +301,20 @@ button:hover {
         gap: 20px;
     }
 
+    .timer-numbers {
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+    
+    .timer-numbers div {
+        min-width: 0;
+        flex: 1;
+    }
+    
+    .timer-numbers span {
+        font-size: 1.4rem;
+    }
+
 }
 
 .main-body {
