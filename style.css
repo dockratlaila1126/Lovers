@@ -376,7 +376,7 @@ button:hover {
 
 .letters-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 22px;
 }
 
@@ -1453,6 +1453,19 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* PHONE BOOK FIX */
+@media (max-width: 600px) {
+    #book {
+        transform: scale(0.42);
+        transform-origin: top center;
+        margin-bottom: -340px;
+    }
+
+    #book-wrapper {
+        overflow: visible;
+    }
 }
 
 /* =========================
@@ -2776,4 +2789,28 @@ outline-offset: 5px;
     background: rgba(255, 250, 250, 0.9);
     transform: translateX(-3px);
     box-shadow: 0 6px 18px rgba(100, 70, 80, 0.12);
+}
+
+/* MOBILE TIMER FIX */
+@media (max-width: 600px) {
+
+    .timer-numbers {
+        flex-wrap: nowrap;
+        gap: 5px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .timer-numbers div {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .timer-numbers span {
+        font-size: 1.45rem;
+    }
+
+    .timer-numbers small {
+        font-size: 0.75rem;
+    }
 }
