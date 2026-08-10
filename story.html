@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bound by Red Thread</title>
+
+
+    <!-- StPageFlip -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+
+        body {
+
+            background: #e8e1d8;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+        }
+
+
+        /* =========================================
+           BOOK
+        ========================================= */
+
+        #book {
+    width: 860px;
+    height: 608px;
+    margin: 0 auto;
+}
+
+
+        /* =========================================
+           PAGES
+        ========================================= */
+
+        .page {
+
+            width: 500px;
+
+            height: 707px;
+
+            background: #fffdf8;
+
+            border: 1px solid #d6cec3;
+
+        }
+
+
+        /* =========================================
+           COVER
+
+           Blank/off-white for now.
+        ========================================= */
+
+        .cover {
+
+            background: #fffdf8;
+
+            color: #5d4842;
+
+        }
+
+
+        /* =========================================
+           CONTROLS
+        ========================================= */
+
+        .controls {
+
+            position: fixed;
+
+            bottom: 18px;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 16px;
+
+            z-index: 1000;
+
+        }
+
+
+        button {
+
+            border: none;
+
+            padding: 9px 18px;
+
+            border-radius: 20px;
+
+            background: #76534c;
+
+            color: white;
+
+            cursor: pointer;
+
+        }
+
+
+        button:disabled {
+
+            opacity: 0.35;
+
+            cursor: default;
+
+        }
+
+
+        #status {
+
+            min-width: 100px;
+
+            text-align: center;
+
+            color: #5d4842;
+
+        }
+
+    </style>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="main-body"></body>
+
+<button class="back-button" onclick="history.back()">← back</button>
+
+<div class="hearts">
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+</div>
+    
+    <!-- =============================================
+         BOOK
+    ============================================== -->
+<div id="book-wrapper">
+
+    <div id="book">
+
+
+        <!-- COVER -->
+
+        <div class="page cover" data-density="hard">
+            <img
+                src="images/cover.png"
+                alt="Bound by Red Thread cover"
+                style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    display: block;
+                "
+            >
+        </div>
+
+
+        <!-- PAGE 1 -->
+
+        <div class="page">
+            <img
+                src="images/1.png"
+                alt="Page 1"
+                style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    display: block;
+                    margin: auto;
+                "
+            >
+        </div>
+
+
+        <div class="page">
+            <img src="images/2.png" alt="Page 2"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/3.png" alt="Page 3"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/4.png" alt="Page 4"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/5.png" alt="Page 5"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/6.png" alt="Page 6"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/7.png" alt="Page 7"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/8.png" alt="Page 8"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/9.png" alt="Page 9"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/10.png" alt="Page 10"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/11.png" alt="Page 11"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/12.png" alt="Page 12"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/13.png" alt="Page 13"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/14.png" alt="Page 14"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/15.png" alt="Page 15"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/16.png" alt="Page 16"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/17.png" alt="Page 17"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/18.png" alt="Page 18"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/19.png" alt="Page 19"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/20.png" alt="Page 20"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+        
+        <div class="page">
+            <img src="images/21.png" alt="Page 21"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+
+        <div class="page">
+            <img src="images/22.png" alt="Page 22"
+                 style="width:100%; height:100%; object-fit:fill; display:block; margin:auto;">
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+    <!-- =============================================
+         CONTROLS
+    ============================================== -->
+
+    <div class="controls">
+
+        <button
+            id="previous"
+            disabled
+        >
+            ←
+        </button>
+
+
+        <span id="status">
+            Cover
+        </span>
+
+
+        <button id="next">
+            →
+        </button>
+
+    </div>
+
+
+    <script>
+
+
+        /* =========================================
+           BOOK
+        ========================================= */
+
+        const bookElement =
+            document.getElementById("book");
+
+            const bookContainer = bookElement.parentElement;
+
+        const pageFlip =
+            new St.PageFlip(
+                bookElement,
+                {
+
+                    width: 430,
+
+                    height: 608,
+
+                    size: "fixed",
+
+                    minWidth: 280,
+
+                    maxWidth: 550,
+
+                    minHeight: 400,
+
+                    maxHeight: 780,
+
+                    showCover: true,
+
+                    usePortrait: false,
+
+                    drawShadow: true,
+
+                    flippingTime: 900,
+
+                    maxShadowOpacity: 0.35,
+
+                    mobileScrollSupport: false,
+
+                    useMouseEvents: true
+
+                }
+            );
+
+
+        /* =========================================
+           LOAD PAGES
+        ========================================= */
+
+        pageFlip.loadFromHTML(
+    document.querySelectorAll(".page")
+);
+
+bookElement.style.setProperty(
+    "transform",
+    "translateX(-215px)",
+    "important"
+);
+
+pageFlip.on("flip", function(e) {
+
+    if (e.data === 0) {
+
+        bookElement.style.setProperty(
+            "transform",
+            "translateX(-215px)",
+            "important"
+        );
+
+    } else {
+
+        bookElement.style.removeProperty("transform");
+
+    }
+
+});
+
+
+        /* =========================================
+           CONTROLS
+        ========================================= */
+
+        const previous =
+            document.getElementById("previous");
+
+
+        const next =
+            document.getElementById("next");
+
+
+        const status =
+            document.getElementById("status");
+
+
+        /* =========================================
+           OPEN BOOK
+        ========================================= */
+
+        function openBook() {
+    pageFlip.turnToPage(1);
+
+    updateStatus(1);
+}
+
+
+        /* =========================================
+           NEXT
+        ========================================= */
+
+        function nextPage() {
+
+            pageFlip.flipNext("top");
+
+        }
+
+
+        /* =========================================
+           PREVIOUS
+        ========================================= */
+
+        function previousPage() {
+
+            const current =
+                pageFlip.getCurrentPageIndex();
+
+
+            /*
+                If we're on the FIRST
+                inside spread, close the book.
+            */
+
+            if (current <= 1) {
+
+                pageFlip.turnToPage(0);
+
+                updateStatus(0);
+
+                return;
+
+            }
+
+
+            /*
+                Otherwise do a normal
+                animated page turn.
+            */
+
+            pageFlip.flipPrev("top");
+
+        }
+
+
+        /* =========================================
+           STATUS
+        ========================================= */
+
+        function updateStatus(index) {
+
+
+            /*
+                CLOSED COVER
+            */
+
+            if (index === 0) {
+
+bookElement.classList.add("cover-mode");
+
+status.textContent = "Cover";
+
+previous.disabled = true;
+next.disabled = false;
+
+return;
+}
+
+
+            /*
+                FIRST INSIDE SPREAD
+            */
+
+            if (index === 1) {
+
+bookElement.classList.remove("cover-mode");
+
+status.textContent = "Pages 1–2";
+
+previous.disabled = false;
+next.disabled = false;
+
+return;
+}
+
+
+            const total =
+                pageFlip.getPageCount();
+
+
+            /*
+                FINAL PAGE
+            */
+
+            if (index >= total - 1) {
+
+                status.textContent =
+                    "Page 22";
+
+                previous.disabled =
+                    false;
+
+                next.disabled =
+                    true;
+
+                return;
+
+            }
+
+
+            /*
+                NORMAL SPREAD
+            */
+
+            status.textContent =
+                `Pages ${index}–${index + 1}`;
+
+
+            previous.disabled =
+                false;
+
+
+            next.disabled =
+                false;
+
+        }
+
+
+        /* =========================================
+           BUTTONS
+        ========================================== */
+
+        next.addEventListener(
+            "click",
+            nextPage
+        );
+
+
+        previous.addEventListener(
+            "click",
+            previousPage
+        );
+
+
+        /* =========================================
+           PAGE FLIP EVENT
+        ========================================== */
+
+        pageFlip.on(
+            "flip",
+            function(event) {
+
+                updateStatus(
+                    event.data
+                );
+
+            }
+        );
+
+
+        /* =========================================
+           KEYBOARD
+        ========================================== */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (
+                    event.key === "ArrowRight"
+                ) {
+
+                    nextPage();
+
+                }
+
+
+                if (
+                    event.key === "ArrowLeft"
+                ) {
+
+                    previousPage();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================
+           INITIAL STATE
+        ========================================== */
+
+        updateStatus(0);
+
+    </script>
+
+</body>
+
+</html>

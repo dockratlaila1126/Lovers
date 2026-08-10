@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Future ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="main-body">
+
+    <!-- SAME BACKGROUND AS THE REST OF THE WEBSITE -->
+
+    <div class="hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+    </div>
+
+
+    <main class="future-page">
+
+        <button class="back-button" onclick="history.back()">← back</button>
+
+        <h1>Our Future ♡</h1>
+
+        <p class="future-subtitle">
+            Everything we haven't lived yet
+        </p>
+
+
+        <div class="future-sections">
+
+            <button class="future-option" onclick="openFuture('travel')">
+                <span class="future-icon">✈︎</span>
+                <span class="future-name">Travel</span>
+                <span class="future-description">
+                    Places we'll go
+                </span>
+            </button>
+
+
+            <button class="future-option" onclick="openFuture('home')">
+                <span class="future-icon">⌂</span>
+                <span class="future-name">Home</span>
+                <span class="future-description">
+                    The place we'll come back to
+                </span>
+            </button>
+
+
+            <button class="future-option" onclick="openFuture('family')">
+                <span class="future-icon">♡</span>
+                <span class="future-name">Family</span>
+                <span class="future-description">
+                    My favorite section
+                </span>
+            </button>
+
+
+            <button class="future-option" onclick="openFuture('activities')">
+                <span class="future-icon">✦</span>
+                <span class="future-name">Activities</span>
+                <span class="future-description">
+                    Things we'll do together
+                </span>
+            </button>
+
+
+            <button class="future-option" onclick="openFuture('life')">
+                <span class="future-icon">☼</span>
+                <span class="future-name">Life</span>
+                <span class="future-description">
+                    The ordinary days
+                </span>
+            </button>
+
+        </div>
+
+        <!-- =========================================================
+     FUTURE SECTIONS
+========================================================= -->
+
+<div class="future-modal" id="travel">
+
+    <div class="future-modal-content">
+
+        <button class="future-close" onclick="closeFuture('travel')">×</button>
+
+        <div class="future-modal-icon">✈︎</div>
+
+        <h2>Travel ♡</h2>
+
+        <p class="future-modal-subtitle">
+            Places we'll go
+        </p>
+
+        <div class="future-writing">
+
+            <p>
+                I wanna take you to Japan. It's the prettiest place ever. 
+            </p>
+
+            <p>
+                We will go to Thailand.
+            </p>
+
+            <p>
+                I want to go to Italy so we can see Lake Como.
+            </p>
+
+            <p>
+                You're gonna take me to Australia I assume. Kangaroos and shi.
+            </p>
+
+            <p>
+                We have to go to South Korea LET'S GO TO NORTH KOREA TOO.
+            </p>
+
+            <p>
+                We are definitely going to India. I also want to visit Pakistan.
+            </p>
+
+            <p>
+                We'll basically visit all the Asian countries.
+            </p>
+
+            <p>
+                Oh and of course Nigeria for jollof rice.
+            </p>
+
+            <p>
+                I also want to go somewhere with snow so that I could throw snowballs at you.
+            </p>
+
+            <p class="future-ending">
+                Where else would you like to go? ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="future-modal" id="home">
+
+    <div class="future-modal-content">
+
+        <button class="future-close" onclick="closeFuture('home')">×</button>
+
+        <div class="future-modal-icon">⌂</div>
+
+        <h2>Home ♡</h2>
+
+        <p class="future-modal-subtitle">
+            The place we'll come back to
+        </p>
+
+        <div class="future-writing">
+
+            <p>
+                Our big mansion with a disappearing pool and a hidden tennis
+                court and a hot tub.
+            </p>
+
+            <p>
+                Ensuites in all the rooms but toilets are separate coz we aren't animals.
+            </p>
+
+            <p>
+                Lots and lots of rooms and places for us to disappear into.
+            </p>
+
+            <p>
+                A giant library for all your reading needs.
+            </p>
+
+            <p>
+                A trampoline and a ball pit because obviously.
+            </p>
+
+            <p>
+                And you want a whole house for our dogs.
+            </p>
+
+            <p>
+                I'm still caught up on Trailer though... perhaps we can make
+                an exception for a few weeks. lol.
+            </p>
+
+            <p class="future-ending">
+                A home that's ours. ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="future-modal" id="family">
+
+    <div class="future-modal-content">
+
+        <button class="future-close" onclick="closeFuture('family')">×</button>
+
+        <div class="future-modal-icon">♡</div>
+
+        <h2>Family ♡</h2>
+
+        <p class="future-modal-subtitle">
+            My favorite section
+        </p>
+
+        <div class="future-writing">
+
+            <p>
+                A billion cats and a billion dogs, I guess.
+            </p>
+
+            <p>
+                Astro will be with us and you WILL love him.
+            </p>
+
+            <p>
+                We can get snakes and spiders too.
+            </p>
+
+            <p>
+                OH AND THE BABY GOATS. I NEED THEM.
+            </p>
+
+            <p>
+                And Highland cows. The fluffy ones. PLS.
+            </p>
+
+            <p>
+                And then, of course, our 45 kids.
+            </p>
+
+            <div class="kid-names">
+                <span>Steak, </span>
+                <span>Atom, </span>
+                <span>Sperm, </span>
+                <span>Ovum, </span>
+                <span>Proton, </span>
+                <span>Neutron, </span>
+                <span>Electron, </span>
+                <span>$, </span>
+                <span>Hash, </span>
+                <span>Tag, </span>
+                <span>Laila Jr, </span>
+                <span>Milli, </span>
+                <span>Worm, </span>
+            </div>
+
+            <p>
+                ...and uhm idk, that's all I remember right now.
+            </p>
+
+            <p class="future-ending">
+                But I can't wait to build a family with you, my love. ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="future-modal" id="activities">
+
+    <div class="future-modal-content">
+
+        <button class="future-close" onclick="closeFuture('activities')">×</button>
+
+        <div class="future-modal-icon">✦</div>
+
+        <h2>Activities ♡</h2>
+
+        <p class="future-modal-subtitle">
+            Things we'll do together
+        </p>
+
+        <div class="future-writing">
+
+            <p>
+                I want to go to an amusement park with you and our children
+                when they're old enough to go on the rides.
+            </p>
+
+            <p>
+                I also want to take you to an aquarium like you've always
+                wanted.
+            </p>
+
+            <p>
+                Picnics. Beach days. Cycling together.
+            </p>
+
+            <p>
+                We can play sports together. Please. I will teach you.
+            </p>
+
+            <p>
+                And obviously a waterpark because you're my lil water slide.
+            </p>
+
+            <p>
+                I may even teach you how to play Rivals so we can play
+                together.
+            </p>
+
+            <p>
+                I want to get a motorcycle and ride off into the sunset with
+                you.
+            </p>
+
+            <p>
+                Hiking. Hot air balloon. Boat rides.
+            </p>
+
+            <p>
+                Nice restaurants. Dessert places. Shopping trips.
+            </p>
+
+            <p>
+                I'll spoil you with whatever you want.
+            </p>
+
+            <p class="future-ending">
+                I want to do everything with you. ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="future-modal" id="life">
+
+    <div class="future-modal-content">
+
+        <button class="future-close" onclick="closeFuture('life')">×</button>
+
+        <div class="future-modal-icon">☼</div>
+
+        <h2>Life ♡</h2>
+
+        <p class="future-modal-subtitle">
+            The ordinary days
+        </p>
+
+        <div class="future-writing">
+
+            <p>
+                I can't wait to come home to my wife after a long day of work.
+            </p>
+
+            <p>
+                We can cook together and maybe watch Netflix while we eat.
+            </p>
+
+            <p>
+                You will wash the dishes while I watch you and get turned on.
+            </p>
+
+            <p>
+                Then we can cuddle and go to bed...
+                <em>or do something else.</em> ;)
+            </p>
+
+            <p>
+                And then I get to wake up to your pretty face every morning.
+            </p>
+
+            <p>
+                You can be domestic and pack my lunch for me. Please.
+            </p>
+
+            <p>
+                On weekends or our days off, we'll go out on fun dates.
+            </p>
+
+            <p>
+                When we have kids, we can take them to exciting places.
+            </p>
+
+            <p>
+                And when you're tired or having a bad day, I want to fill the
+                tub for you and make it look pretty.
+            </p>
+
+            <p>
+                I'll wash your hair and take care of you.
+            </p>
+
+            <p>
+                I will even attempt to cook for you.
+            </p>
+
+            <p class="future-ending">
+                I don't just want the big moments with you.
+                <br>
+                I want the boring ones too. ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </main>
+
+
+    <script>
+
+        function openFuture(section) {
+            document.getElementById(section).classList.add("future-open");
+            document.body.classList.add("future-modal-open");
+        }
+    
+        function closeFuture(section) {
+            document.getElementById(section).classList.remove("future-open");
+            document.body.classList.remove("future-modal-open");
+        }
+    
+    </script>
+
+</body>
+
+</html>

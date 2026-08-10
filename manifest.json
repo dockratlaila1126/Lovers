@@ -1,0 +1,15 @@
+{
+    "name": "Lovers",
+    "short_name": "Lovers",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#e8b6c1",
+    "theme_color": "#e8b6c1",
+    "icons": [
+      {
+        "src": "images/icon.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      }
+    ]
+  }

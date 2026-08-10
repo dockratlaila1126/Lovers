@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little Notes ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+    margin: 0;
+    min-height: 100vh;
+    background: #e8aeb8;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: #8f4b58;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+        /* =========================
+           BACKGROUND HEARTS
+           ========================= */
+
+        .hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hearts span {
+            position: absolute;
+            color: rgba(150, 55, 65, 0.32);
+            font-size: 20px;
+        }
+
+        .hearts span:nth-child(2n) {
+            font-size: 15px;
+            opacity: 0.7;
+        }
+
+        .hearts span:nth-child(3n) {
+            font-size: 24px;
+            opacity: 0.55;
+        }
+
+        .hearts span:nth-child(1)  { left: 6%;  top: 8%; }
+        .hearts span:nth-child(2)  { left: 24%; top: 7%; }
+        .hearts span:nth-child(3)  { left: 45%; top: 9%; }
+        .hearts span:nth-child(4)  { left: 68%; top: 6%; }
+        .hearts span:nth-child(5)  { left: 90%; top: 10%; }
+
+        .hearts span:nth-child(6)  { left: 14%; top: 22%; }
+        .hearts span:nth-child(7)  { left: 34%; top: 20%; }
+        .hearts span:nth-child(8)  { left: 57%; top: 23%; }
+        .hearts span:nth-child(9)  { left: 78%; top: 19%; }
+        .hearts span:nth-child(10) { left: 96%; top: 25%; }
+
+        .hearts span:nth-child(11) { left: 5%;  top: 38%; }
+        .hearts span:nth-child(12) { left: 26%; top: 34%; }
+        .hearts span:nth-child(13) { left: 47%; top: 39%; }
+        .hearts span:nth-child(14) { left: 70%; top: 33%; }
+        .hearts span:nth-child(15) { left: 88%; top: 40%; }
+
+        .hearts span:nth-child(16) { left: 17%; top: 51%; }
+        .hearts span:nth-child(17) { left: 39%; top: 48%; }
+        .hearts span:nth-child(18) { left: 61%; top: 53%; }
+        .hearts span:nth-child(19) { left: 82%; top: 49%; }
+        .hearts span:nth-child(20) { left: 98%; top: 55%; }
+
+        .hearts span:nth-child(21) { left: 7%;  top: 65%; }
+        .hearts span:nth-child(22) { left: 29%; top: 61%; }
+        .hearts span:nth-child(23) { left: 50%; top: 67%; }
+        .hearts span:nth-child(24) { left: 72%; top: 62%; }
+        .hearts span:nth-child(25) { left: 91%; top: 69%; }
+
+        .hearts span:nth-child(26) { left: 14%; top: 79%; }
+        .hearts span:nth-child(27) { left: 36%; top: 76%; }
+        .hearts span:nth-child(28) { left: 58%; top: 82%; }
+        .hearts span:nth-child(29) { left: 79%; top: 77%; }
+        .hearts span:nth-child(30) { left: 96%; top: 84%; }
+
+        .hearts span:nth-child(31) { left: 6%;  top: 93%; }
+        .hearts span:nth-child(32) { left: 27%; top: 90%; }
+        .hearts span:nth-child(33) { left: 48%; top: 95%; }
+        .hearts span:nth-child(34) { left: 70%; top: 91%; }
+        .hearts span:nth-child(35) { left: 88%; top: 96%; }
+
+
+        /* =========================
+           PAGE
+           ========================= */
+
+        .notepad-page {
+            width: min(900px, 92vw);
+            min-height: 760px;
+            background: #fffaf4;
+            position: relative;
+            z-index: 1;
+            padding: 70px 85px;
+            box-shadow: 0 15px 45px rgba(100, 45, 55, 0.16);
+            border-radius: 4px;
+        }
+
+        .notepad-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .notepad-header .small-title {
+            font-size: 15px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #b77a84;
+            margin-bottom: 10px;
+        }
+
+        .notepad-header h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: 500;
+            color: #8f4b58;
+        }
+
+        .notepad-header p {
+            margin: 10px 0 0;
+            font-size: 19px;
+            font-style: italic;
+            color: #b9828b;
+        }
+
+
+        /* =========================
+           NOTE PAPER
+           ========================= */
+
+        .note-paper {
+            background: #fffdf9;
+            border: 1px solid rgba(143, 75, 88, 0.15);
+            padding: 30px 35px 35px;
+            position: relative;
+            box-shadow: 0 5px 18px rgba(120, 55, 65, 0.08);
+        }
+
+        .note-paper::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: #b85b68;
+            opacity: 0.65;
+        }
+
+        .note-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+        }
+
+        .note-label {
+            font-size: 18px;
+            font-style: italic;
+            color: #9b5965;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #c28c94;
+        }
+
+
+        /* =========================
+           TEXT AREA
+           ========================= */
+
+        textarea {
+            width: 100%;
+            min-height: 330px;
+            resize: vertical;
+
+            border: none;
+            outline: none;
+
+            background:
+                repeating-linear-gradient(
+                    to bottom,
+                    transparent 0px,
+                    transparent 31px,
+                    rgba(170, 95, 105, 0.16) 32px
+                );
+
+            color: #7e4651;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 20px;
+            line-height: 32px;
+
+            padding: 2px 8px;
+        }
+
+        textarea::placeholder {
+            color: #c9a2a8;
+            font-style: italic;
+        }
+
+
+        /* =========================
+           SAVE BUTTON
+           ========================= */
+
+        .save-row {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .save-button {
+            border: none;
+            background: #b85b68;
+            color: #fffaf4;
+            padding: 13px 28px;
+            border-radius: 30px;
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .save-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(120, 55, 65, 0.2);
+        }
+
+
+        /* =========================
+           SAVED NOTES
+           ========================= */
+
+        .saved-section {
+            margin-top: 45px;
+        }
+
+        .saved-title {
+            font-size: 25px;
+            font-weight: 500;
+            color: #8f4b58;
+            margin-bottom: 18px;
+        }
+
+        .saved-note {
+    background: #fffaf4 !important;
+    border: 1px solid rgba(143, 75, 88, 0.22) !important;
+    border-left: 5px solid #b85b68 !important;
+    border-radius: 8px !important;
+    padding: 24px 28px !important;
+    margin: 0 auto 24px auto !important;
+    width: 92% !important;
+    box-shadow: 0 6px 18px rgba(100, 45, 55, 0.12) !important;
+}
+
+.saved-note-date {
+    font-size: 13px;
+    color: #bd8b93;
+    margin-bottom: 12px;
+}
+
+.saved-note-text {
+    font-size: 19px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    color: #80505a;
+}
+
+.delete-note {
+    display: block;
+    margin-top: 16px;
+    border: none;
+    background: transparent;
+    color: #b85b68;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+        .saved-note-date {
+            font-size: 13px;
+            color: #bd8b93;
+            margin-bottom: 8px;
+        }
+
+        .saved-note-text {
+            font-size: 18px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            color: #80505a;
+        }
+
+
+        /* =========================
+           MOBILE
+           ========================= */
+
+        @media (max-width: 650px) {
+
+            .notepad-page {
+                width: 94vw;
+                min-height: 90vh;
+                padding: 45px 25px;
+            }
+
+            .notepad-header h1 {
+                font-size: 36px;
+            }
+
+            .notepad-header p {
+                font-size: 17px;
+            }
+
+            .note-paper {
+                padding: 25px 22px 28px;
+            }
+
+            textarea {
+                min-height: 280px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BACKGROUND HEARTS -->
+
+    <div class="hearts">
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+        <span>♡</span><span>♡</span><span>♡</span><span>♡</span><span>♡</span>
+    </div>
+
+
+    <!-- NOTEPAD -->
+
+    <main class="notepad-page">
+
+        <button class="back-button" onclick="history.back()">← back</button>
+
+        <header class="notepad-header">
+
+            <h1>Our Little Notes ♡</h1>
+
+        </header>
+
+
+        <section class="note-paper">
+
+            <div class="note-top">
+                <div class="note-label">
+                    Dear us,
+                </div>
+
+                <div class="date" id="today"></div>
+            </div>
+
+
+            <textarea
+                id="noteInput"
+                placeholder="Write whatever is on your mind here... ♡"
+            ></textarea>
+
+
+            <div class="save-row">
+                <button class="save-button" onclick="saveNote()">
+                    Save Note ♡
+                </button>
+            </div>
+
+        </section>
+
+
+        <section class="saved-section">
+
+            <div class="saved-title">
+                All saved notes ♡
+            </div>
+
+            <div id="savedNotes"></div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+/* =========================
+   DATE
+   ========================= */
+
+const today = new Date();
+
+date: new Date().toLocaleDateString("en-ZA", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+}) + " · " + new Date().toLocaleTimeString("en-ZA", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+})
+
+
+/* =========================
+   SAVE NOTE
+   ========================= */
+
+   function saveNote() {
+
+const input = document.getElementById("noteInput");
+const text = input.value.trim();
+
+if (!text) {
+    return;
+}
+
+const now = new Date();
+
+const formattedDate =
+    now.toLocaleDateString("en-ZA", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+const formattedTime =
+    now.toLocaleTimeString("en-ZA", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+    });
+
+const notes =
+    JSON.parse(localStorage.getItem("ourLittleNotes")) || [];
+
+notes.unshift({
+    text: text,
+    date: formattedDate,
+    time: formattedTime
+});
+
+localStorage.setItem(
+    "ourLittleNotes",
+    JSON.stringify(notes)
+);
+
+input.value = "";
+
+displayNotes();
+}
+
+
+/* =========================
+   DISPLAY NOTES
+   ========================= */
+
+function displayNotes() {
+
+    const container =
+        document.getElementById("savedNotes");
+
+    const notes =
+        JSON.parse(localStorage.getItem("ourLittleNotes")) || [];
+
+    container.innerHTML = "";
+
+    notes.forEach((note, index) => {
+
+        const noteElement =
+            document.createElement("div");
+
+        /* THE BOX */
+
+        noteElement.style.background = "#fdf4ed";
+        noteElement.style.border = "1px solid rgba(143, 75, 88, 0.22)";
+        noteElement.style.borderLeft = "5px solid #b85b68";
+        noteElement.style.borderRadius = "8px";
+        noteElement.style.padding = "24px 28px";
+        noteElement.style.marginBottom = "24px";
+        noteElement.style.width = "92%";
+        noteElement.style.marginLeft = "auto";
+        noteElement.style.marginRight = "auto";
+        noteElement.style.boxShadow =
+            "0 6px 18px rgba(100, 45, 55, 0.12)";
+        noteElement.style.position = "relative";
+
+
+        /* DATE */
+
+        const date =
+            document.createElement("div");
+
+            date.textContent = note.date + " · " + note.time;
+
+        date.style.fontSize = "13px";
+        date.style.color = "#bd8b93";
+        date.style.marginBottom = "12px";
+
+
+        /* NOTE TEXT */
+
+        const text =
+            document.createElement("div");
+
+        text.textContent = note.text;
+
+        text.style.fontSize = "19px";
+text.style.lineHeight = "1.6";
+text.style.whiteSpace = "pre-wrap";
+text.style.overflowWrap = "anywhere";
+text.style.wordBreak = "break-word";
+text.style.maxWidth = "100%";
+text.style.boxSizing = "border-box";
+text.style.color = "#80505a";
+
+
+        /* DELETE BUTTON */
+
+        const deleteButton =
+            document.createElement("button");
+
+        deleteButton.textContent = "Delete ♡";
+
+        deleteButton.style.marginTop = "16px";
+        deleteButton.style.border = "none";
+        deleteButton.style.background = "transparent";
+        deleteButton.style.color = "#b85b68";
+        deleteButton.style.fontFamily =
+            '"Cormorant Garamond", Georgia, serif';
+        deleteButton.style.fontSize = "14px";
+        deleteButton.style.cursor = "pointer";
+        deleteButton.style.padding = "0";
+
+        deleteButton.onclick = function() {
+            deleteNote(index);
+        };
+
+
+        /* PUT EVERYTHING INTO THE BOX */
+
+        noteElement.appendChild(date);
+        noteElement.appendChild(text);
+        noteElement.appendChild(deleteButton);
+
+        container.appendChild(noteElement);
+    });
+}
+
+
+/* =========================
+   DELETE NOTE
+   ========================= */
+
+function deleteNote(index) {
+
+    const notes =
+        JSON.parse(localStorage.getItem("ourLittleNotes")) || [];
+
+    notes.splice(index, 1);
+
+    localStorage.setItem(
+        "ourLittleNotes",
+        JSON.stringify(notes)
+    );
+
+    displayNotes();
+}
+
+
+/* =========================
+   LOAD NOTES WHEN PAGE OPENS
+   ========================= */
+
+displayNotes();
+
+
+    </script>
+
+</body>
+</html>

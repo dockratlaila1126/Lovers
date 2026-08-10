@@ -1,0 +1,2779 @@
+body {
+    background: #e8aeb8;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* =========================
+   SCATTERED BACKGROUND HEARTS
+   ========================= */
+
+.hearts {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hearts span {
+    position: absolute;
+    color: rgba(150, 55, 65, 0.32);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* different sizes so they feel natural */
+
+.hearts span:nth-child(2n) {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.hearts span:nth-child(3n) {
+    font-size: 24px;
+    opacity: 0.55;
+}
+
+/* scattered positions */
+
+.hearts span:nth-child(1)  { left: 6%;  top: 8%; }
+.hearts span:nth-child(2)  { left: 24%; top: 7%; }
+.hearts span:nth-child(3)  { left: 45%; top: 9%; }
+.hearts span:nth-child(4)  { left: 68%; top: 6%; }
+.hearts span:nth-child(5)  { left: 90%; top: 10%; }
+
+.hearts span:nth-child(6)  { left: 14%; top: 22%; }
+.hearts span:nth-child(7)  { left: 34%; top: 20%; }
+.hearts span:nth-child(8)  { left: 57%; top: 23%; }
+.hearts span:nth-child(9)  { left: 78%; top: 19%; }
+.hearts span:nth-child(10) { left: 96%; top: 25%; }
+
+.hearts span:nth-child(11) { left: 5%;  top: 38%; }
+.hearts span:nth-child(12) { left: 26%; top: 34%; }
+.hearts span:nth-child(13) { left: 47%; top: 39%; }
+.hearts span:nth-child(14) { left: 70%; top: 33%; }
+.hearts span:nth-child(15) { left: 88%; top: 40%; }
+
+.hearts span:nth-child(16) { left: 17%; top: 51%; }
+.hearts span:nth-child(17) { left: 39%; top: 48%; }
+.hearts span:nth-child(18) { left: 61%; top: 53%; }
+.hearts span:nth-child(19) { left: 82%; top: 49%; }
+.hearts span:nth-child(20) { left: 98%; top: 55%; }
+
+.hearts span:nth-child(21) { left: 7%;  top: 65%; }
+.hearts span:nth-child(22) { left: 29%; top: 61%; }
+.hearts span:nth-child(23) { left: 50%; top: 67%; }
+.hearts span:nth-child(24) { left: 72%; top: 62%; }
+.hearts span:nth-child(25) { left: 91%; top: 69%; }
+
+.hearts span:nth-child(26) { left: 14%; top: 79%; }
+.hearts span:nth-child(27) { left: 36%; top: 76%; }
+.hearts span:nth-child(28) { left: 58%; top: 82%; }
+.hearts span:nth-child(29) { left: 79%; top: 77%; }
+.hearts span:nth-child(30) { left: 96%; top: 84%; }
+
+.hearts span:nth-child(31) { left: 6%;  top: 93%; }
+.hearts span:nth-child(32) { left: 27%; top: 90%; }
+.hearts span:nth-child(33) { left: 48%; top: 95%; }
+.hearts span:nth-child(34) { left: 70%; top: 91%; }
+.hearts span:nth-child(35) { left: 88%; top: 96%; }
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Wolf + kitten */
+
+.logo {
+    width: 280px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+
+/* Title */
+
+h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #2E2420;
+    margin: 0;
+    line-height: 1;
+}
+
+
+/* Subtitle */
+
+p {
+    color: #8A7A70;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 22px;
+    margin-bottom: 40px;
+}
+
+
+/* Begin button */
+
+button {
+    background: rgba(255, 255, 255, 0.3);
+    color: #4b3d3d;
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    border: 1px solid rgba(120, 60, 70, 0.18);
+    padding: 16px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 20px rgba(100, 35, 40, 0.08);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 25px rgba(100, 35, 40, 0.12);
+}
+
+
+/* =========================
+   PHONE VERSION
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .logo {
+        width: 240px;
+        height: 190px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 19px;
+        padding: 16px 48px;
+    }
+}
+
+/* =========================
+   MAIN LOVERS PAGE
+   ========================= */
+
+   .main-page {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.main-page h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.main-subtitle {
+    margin-top: 8px;
+    margin-bottom: 40px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+/* TIMER */
+
+.timer {
+    margin: 0 auto 50px;
+    padding: 25px;
+    max-width: 650px;
+    border: 1px solid rgba(120, 60, 70, 0.18);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.timer-label {
+    margin: 0 0 18px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.timer-numbers {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.timer-numbers div {
+    min-width: 70px;
+}
+
+.timer-numbers span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.timer-numbers small {
+    font-size: 0.8rem;
+    opacity: 0.65;
+}
+
+/* SECTION CARDS */
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.menu button {
+    min-height: 110px;
+    padding: 20px;
+    border: 1px solid rgba(120, 60, 70, 0.18);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.3);
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.menu button span {
+    display: block;
+    margin-top: 8px;
+}
+
+.menu button:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* PHONE */
+
+@media (max-width: 600px) {
+
+    .main-page {
+        padding: 40px 15px;
+    }
+
+    .main-page h1 {
+        font-size: 2.3rem;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .timer-numbers {
+        gap: 20px;
+    }
+
+}
+
+.main-body {
+    min-height: 100vh;
+    height: auto;
+    align-items: flex-start;
+}
+
+/* HEARTS — keep landing page fixed */
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Main page hearts scroll with the page */
+.main-body .hearts {
+    position: absolute;
+    z-index: 0;
+}
+
+/* Main page content stays above the hearts */
+.main-body .main-page {
+    position: relative;
+    z-index: 1;
+}
+
+.main-body .hearts {
+    z-index: 0;
+}
+
+.main-body .main-page {
+    position: relative;
+    z-index: 2;
+}
+
+.main-body .menu,
+.main-body .timer {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   LETTERS PAGE
+   ========================= */
+
+   .letters-page {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px 80px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.letters-page h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.letters-subtitle {
+    margin-top: 8px;
+    margin-bottom: 45px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    opacity: 0.7;
+}
+
+.letters-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.letter-card {
+    width: 100%;
+    min-height: 150px;
+    padding: 28px 25px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(120, 60, 70, 0.18);
+    border-radius: 20px;
+
+    color: #4b3d3d;
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.letter-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.letter-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.letter-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.letter-description {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+
+    .letters-page {
+        padding: 40px 15px 60px;
+    }
+
+    .letters-page h1 {
+        font-size: 2.4rem;
+    }
+
+    .letters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter-card {
+        min-height: 135px;
+    }
+}
+
+.letter-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(60, 35, 40, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+    z-index: 10;
+}
+
+.letter-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.letter-popup {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 45px;
+    box-sizing: border-box;
+    background: #f7d9de;
+    border: 1px solid rgba(120, 60, 70, 0.18);
+    border-radius: 20px;
+    color: #4b3d3d;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(80, 35, 45, 0.15);
+}
+
+.letter-popup h2 {
+    margin-top: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#letter-content {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.close-letter {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #4b3d3d;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close-letter:hover {
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+}
+
+/* =========================
+   LETTERS PAGE — FINAL OVERRIDE
+   ========================= */
+
+   body.main-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.letters-page {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 20px 80px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.letters-page h1 {
+    margin: 0 0 5px;
+}
+
+.letters-subtitle {
+    margin: 0 0 30px;
+}
+
+.letters-grid {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.letter-card {
+    width: 100%;
+    min-height: 150px;
+    margin: 0;
+    padding: 25px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(120, 60, 70, 0.18);
+    border-radius: 20px;
+
+    color: #4b3d3d;
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.letter-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.letter-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.letter-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.letter-description {
+    margin-top: 8px;
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .letters-page {
+        padding: 25px 15px 60px;
+    }
+
+    .letters-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   CUTE LETTER POPUP
+   ========================= */
+
+   .letter-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    background: rgba(76, 38, 48, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+
+    z-index: 100;
+}
+
+.letter-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.letter-popup {
+    position: relative;
+
+    width: min(90%, 600px);
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    padding: 45px 45px 40px;
+
+    box-sizing: border-box;
+
+    background: #fff4f2;
+
+    border: 1px solid rgba(150, 80, 90, 0.15);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(80, 35, 45, 0.2);
+
+    color: #4b3d3d;
+
+    transform: translateY(15px) scale(0.97);
+
+    transition: transform 0.3s ease;
+}
+
+.letter-overlay.show .letter-popup {
+    transform: translateY(0) scale(1);
+}
+
+/* little heart above title */
+
+.letter-popup::before {
+    content: "♡";
+
+    display: block;
+
+    text-align: center;
+
+    margin-bottom: 8px;
+
+    color: #a85c68;
+
+    font-size: 25px;
+}
+
+/* title */
+
+.letter-popup h2 {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    color: #4b3d3d;
+}
+
+/* little divider */
+
+.letter-popup h2::after {
+    content: "♡";
+
+    display: block;
+
+    margin: 12px auto 25px;
+
+    font-size: 13px;
+
+    color: #a85c68;
+
+    opacity: 0.7;
+}
+
+/* letter itself */
+
+#letter-content {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    color: #4b3d3d;
+}
+
+/* close button */
+
+.close-letter {
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    padding: 2px 6px;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    color: #8b6268;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: 0.65;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.close-letter:hover {
+    background: transparent;
+
+    box-shadow: none;
+
+    opacity: 1;
+
+    transform: scale(1.1);
+}
+
+/* mobile */
+
+@media (max-width: 600px) {
+
+    .letter-popup {
+        width: 94%;
+
+        padding: 40px 25px 30px;
+
+        max-height: 82vh;
+
+        border-radius: 20px;
+    }
+
+    .letter-popup h2 {
+        font-size: 1.7rem;
+    }
+
+    #letter-content {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* =================================
+   ENVELOPE — CLOSED STATE
+   ================================= */
+
+   .envelope-stage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Envelope itself */
+
+.envelope {
+    position: relative;
+
+    width: min(420px, 90vw);
+    aspect-ratio: 1.5 / 1;
+
+    margin: 25px auto 0;
+
+    perspective: 1000px;
+}
+
+/* Back of envelope */
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+
+    background: #e8b7c0;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 35px rgba(80, 35, 45, 0.18);
+
+    z-index: 1;
+}
+
+/* LETTER
+   Completely hidden inside while closed */
+
+.envelope-letter {
+    position: absolute;
+
+    left: 5%;
+    bottom: 0%;
+
+    width: 90%;
+    height: 88%;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+.letter-paper {
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+
+    padding: 28px;
+
+    background: #fffaf7;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    color: #4b3d3d;
+}
+
+/* Override the normal popup heading styling */
+
+.letter-paper h2 {
+    margin: 0 0 18px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.7rem;
+
+    font-weight: 500;
+
+    color: #4b3d3d;
+}
+
+/* Remove the decorative popup heart from this heading */
+
+.letter-paper h2::after {
+    display: none;
+}
+
+.letter-paper #letter-content {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+
+    color: #4b3d3d;
+}
+
+/* FRONT POCKET
+   This is what hides the letter */
+
+.envelope-pocket {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 60%;
+
+    background: #dfa2ae;
+
+    clip-path: polygon(
+        0 0,
+        50% 58%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    border-radius: 0 0 8px 8px;
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+/* TOP FLAP */
+
+.envelope-flap {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #efc3ca;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 58%
+    );
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+/* HEART SEAL */
+
+.envelope-seal {
+    position: absolute;
+
+    left: 50%;
+    top: 58%;
+
+    transform: translate(-50%, -50%);
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #9b4d58;
+
+    color: white;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    z-index: 6;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(90, 35, 45, 0.18);
+}
+
+.envelope-seal:hover {
+    background: #9b4d58;
+
+    transform: translate(-50%, -50%) scale(1.05);
+
+    box-shadow:
+        0 7px 18px rgba(90, 35, 45, 0.22);
+}
+
+/* Instruction */
+
+.envelope-hint {
+    margin: 18px 0 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    color: #8d666d;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .envelope {
+        width: 90vw;
+    }
+
+    .letter-paper {
+        padding: 20px;
+    }
+
+    .letter-paper h2 {
+        font-size: 1.4rem;
+    }
+
+    .letter-paper #letter-content {
+        font-size: 0.95rem;
+    }
+
+    .envelope-seal {
+        width: 45px;
+        height: 45px;
+
+        font-size: 21px;
+    }
+}
+
+/* ENVELOPE FLAP OPENING */
+
+.envelope-flap {
+    transform-origin: top center;
+    transition: transform 0.7s ease;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+/* LETTER SLIDES OUT FROM THE POCKET */
+
+.envelope-letter {
+    transition: transform 0.9s cubic-bezier(0.22, 0.8, 0.25, 1);
+    z-index: 1;
+}
+
+/* FINAL LETTER SLIDE */
+
+.envelope-letter {
+    z-index: 0;
+    transition: transform 1s cubic-bezier(0.22, 0.8, 0.25, 1);
+}
+
+/* flap moves behind the letter once opened */
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+/* paper stays behind the pocket and physically rises */
+.envelope.open .envelope-letter {
+    transform: translateY(-45%);
+    z-index: 3;
+}
+
+/* Remove the white popup behind the envelope */
+
+.letter-popup {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+}
+
+/* Keep the envelope centered */
+
+.envelope-stage {
+    margin: 0;
+}
+
+/* Move the close button to the outside corner */
+
+.letter-popup .close-letter {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+
+    z-index: 50;
+}
+
+/* SOFT BLUSH CREAM ENVELOPE */
+
+.envelope-back {
+    background: #F5E3D8;
+}
+
+.envelope-flap {
+    background: #EFD5CB;
+}
+
+.envelope-pocket {
+    background: #E8C9C0;
+}
+
+.envelope-seal {
+    background: #B86B76;
+    color: white;
+}
+
+.envelope-seal:hover {
+    background: #B86B76;
+}
+
+/* =================================
+   LOVE LETTER PAPER
+   ================================= */
+
+   .letter-paper {
+    background: #FFFDF9;
+
+    border: 1px solid rgba(160, 110, 110, 0.12);
+    border-radius: 3px;
+
+    box-shadow:
+        0 8px 25px rgba(80, 40, 45, 0.10);
+
+    color: #4E3D3D;
+
+    padding: 42px 45px;
+
+    box-sizing: border-box;
+}
+
+/* Letter title */
+
+.letter-paper h2 {
+    margin: 0 0 22px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 2rem;
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    color: #5A4145;
+}
+
+/* Little decorative line underneath title */
+
+.letter-paper h2::after {
+    content: "♡";
+
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 18px;
+
+    color: #B86B76;
+}
+
+/* Actual letter text */
+
+.letter-paper #letter-content {
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.12rem;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    color: #514244;
+}
+
+/* Paragraph spacing */
+
+.letter-paper #letter-content p {
+    margin: 0 0 18px;
+}
+
+/* Final paragraph */
+
+.letter-paper #letter-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* =================================
+   PRETTY LOVE LETTER
+   ================================= */
+
+   .letter-paper {
+    background: #FFFDF8;
+
+    border: 1px solid rgba(150, 100, 100, 0.10);
+    border-radius: 2px;
+
+    box-shadow:
+        0 6px 20px rgba(80, 40, 45, 0.08);
+
+    padding: 38px 42px;
+
+    box-sizing: border-box;
+}
+
+/* Letter heading */
+
+.letter-paper h2 {
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.55rem;
+    font-weight: 500;
+
+    line-height: 1.25;
+
+    text-align: center;
+
+    color: #594447;
+
+    white-space: nowrap;
+}
+
+/* Little heart underneath */
+
+.letter-paper h2::after {
+    content: "♡";
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 16px;
+
+    color: #B86B76;
+}
+
+/* Letter body */
+
+.letter-paper #letter-content {
+    margin-top: 20px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+
+    color: #514244;
+
+    text-align: left;
+}
+
+/* Paragraphs */
+
+.letter-paper #letter-content p {
+    margin: 0 0 16px;
+}
+
+/* Signature */
+
+.letter-paper .signature {
+    margin-top: 28px;
+
+    text-align: right;
+
+    font-style: italic;
+
+    color: #76575d;
+}
+
+/* =================================
+   LOVE LETTER DETAILS
+   ================================= */
+
+   .letter-date {
+    text-align: right;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #9A777B;
+    margin-bottom: 24px;
+}
+
+.letter-greeting {
+    font-size: 1.15rem;
+    margin-bottom: 18px !important;
+}
+
+.letter-signature {
+    margin-top: 30px !important;
+    text-align: right;
+    font-style: italic;
+    color: #76575D;
+}
+
+/* Bigger open letter + tighter heading spacing */
+
+.envelope.open .envelope-letter {
+    width: 96%;
+    height: 120%;
+    left: 2%;
+}
+
+.letter-paper {
+    padding-top: 10px;
+}
+
+.letter-paper h2 {
+    margin-bottom: 2px !important;
+}
+
+.letter-paper h2::after {
+    margin-top: 3px !important;
+}
+
+.letter-paper {
+    padding-top: 5px !important;
+}
+
+.letter-paper .letter-greeting {
+    margin-top: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.letter-paper #letter-content {
+    margin-top: 0 !important;
+}
+
+#letter-heading {
+    margin-bottom: 5px !important;
+}
+
+/* Smaller letter writing */
+
+.letter-paper #letter-content {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+}
+
+.letter-paper .letter-greeting {
+    font-size: 0.95rem !important;
+}
+
+.letter-paper .letter-signature {
+    font-size: 0.9rem !important;
+}
+
+/* Final letter spacing */
+
+.letter-paper #letter-content {
+    font-size: 0.82rem !important;
+    line-height: 1.55 !important;
+}
+
+.letter-paper .letter-greeting {
+    margin-top: -5px !important;
+    margin-bottom: 10px !important;
+}
+
+.letter-paper .letter-signature {
+    margin-top: 90px !important;
+    font-size: 0.85rem !important;
+}
+
+/* Actual letter text size */
+
+.letter-paper > p {
+    font-size: 0.82rem !important;
+    line-height: 1.55 !important;
+}
+
+/* Greeting */
+
+.letter-paper .letter-greeting {
+    font-size: 0.85rem !important;
+}
+
+/* Signature */
+
+.letter-paper .letter-signature {
+    font-size: 0.82rem !important;
+}
+
+/* ACTUAL LETTER BODY SIZE */
+
+#letter-content p:not(.letter-greeting):not(.letter-signature) {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+}
+
+.letter-paper .letter-signature {
+    margin-top: 150px !important;
+    font-size: 0.80rem !important;
+}
+
+.delete-note {
+    margin-top: 12px;
+    border: none;
+    background: transparent;
+    color: #b85b68;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.delete-note:hover {
+    opacity: 1;
+}
+
+
+.page {
+    overflow: hidden;
+}
+
+.page img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+#book-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 5% 100px;
+    box-sizing: border-box;
+}
+
+.gallery-page h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.polaroid-gallery {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 35px;
+
+    align-items: center;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 12px 12px 35px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.polaroid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Slightly messy Polaroid rotations */
+
+.p1  { transform: rotate(-3deg); }
+.p2  { transform: rotate(2deg); }
+.p3  { transform: rotate(-1deg); }
+
+.p4  { transform: rotate(3deg); }
+.p5  { transform: rotate(-2deg); }
+.p6  { transform: rotate(1deg); }
+
+.p7  { transform: rotate(-2deg); }
+.p8  { transform: rotate(3deg); }
+.p9  { transform: rotate(-3deg); }
+
+.p10 { transform: rotate(2deg); }
+.p11 { transform: rotate(-1deg); }
+.p12 { transform: rotate(3deg); }
+
+.p13 { transform: rotate(-3deg); }
+.p14 { transform: rotate(1deg); }
+.p15 { transform: rotate(-2deg); }
+
+.p16 { transform: rotate(3deg); }
+.p17 { transform: rotate(-2deg); }
+.p20 { transform: rotate(2deg); }
+
+
+/* Hover */
+
+.polaroid:hover {
+    transform: rotate(0deg) translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .gallery-page {
+        padding: 40px 18px 80px;
+    }
+
+    .polaroid-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 18px;
+    }
+
+    .polaroid {
+        padding: 8px 8px 25px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .polaroid-gallery {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+}
+
+.gallery-subtitle {
+    text-align: center;
+    margin-top: -35px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* =========================
+   LITTLE THINGS
+========================= */
+
+.little-things-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 5% 100px;
+    box-sizing: border-box;
+}
+
+.little-things-page h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.little-things-subtitle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 55px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.little-things-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 35px;
+}
+
+.little-note {
+    background: #efc3ca;
+    padding: 35px 25px;
+    border: 1px solid #c99aa6;
+outline: 1px solid #e3bdc6;
+outline-offset: 5px;
+
+    min-height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    line-height: 1.4;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* messy scrapbook rotation */
+
+.note1 { transform: rotate(-3deg); }
+.note2 { transform: rotate(2deg); }
+.note3 { transform: rotate(-1deg); }
+
+.note4 { transform: rotate(3deg); }
+.note5 { transform: rotate(-2deg); }
+.note6 { transform: rotate(1deg); }
+
+.note7 { transform: rotate(-2deg); }
+.note8 { transform: rotate(3deg); }
+.note9 { transform: rotate(-3deg); }
+
+
+.little-note:hover {
+    transform: rotate(0deg) translateY(-7px) scale(1.03);
+
+    box-shadow:
+        0 14px 25px rgba(0, 0, 0, 0.18);
+
+    z-index: 5;
+}
+
+
+/* mobile */
+
+@media (max-width: 700px) {
+
+    .little-things-page {
+        padding: 40px 18px 80px;
+    }
+
+    .little-things-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 18px;
+    }
+
+    .little-note {
+        padding: 25px 15px;
+        min-height: 120px;
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .little-things-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+}
+
+/* =========================================================
+   OUR MEMORIES
+========================================================= */
+
+.memories-page {
+    min-height: 100vh;
+    padding: 70px 30px 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.memories-page h1 {
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 58px;
+    font-weight: 600;
+    color: #050505;
+    position: relative;
+    z-index: 2;
+}
+
+.memories-subtitle {
+    margin-top: 5px;
+    margin-bottom: 70px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-style: italic;
+
+    color: #767174;
+}
+
+
+/* =========================================================
+   MEMORY JAR
+========================================================= */
+
+.memory-jar {
+    position: relative;
+
+    width: 330px;
+    height: 470px;
+
+    margin: 0 auto;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    z-index: 20;
+}
+
+.memory-jar:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================================================
+   REALISTIC GLASS MEMORY JAR
+========================================================= */
+
+.jar {
+    position: absolute;
+
+    left: 50%;
+    bottom: 80px;
+
+    width: 285px;
+    height: 365px;
+
+    transform: translateX(-50%);
+
+    /* soft glass */
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.38) 0%,
+            rgba(245,247,239,0.20) 15%,
+            rgba(255,255,255,0.12) 50%,
+            rgba(245,247,239,0.22) 85%,
+            rgba(255,255,255,0.40) 100%
+        );
+
+    border: 3px solid rgba(177, 177, 177, 0.38);
+
+    /*
+       Rounded shoulders make it read more like a jar
+       instead of a rectangle.
+    */
+    border-radius:
+        38px 38px 55px 55px;
+
+    box-shadow:
+        inset 7px 0 12px rgba(255,255,255,0.28),
+        inset -7px 0 12px rgba(170,170,170,0.10),
+        inset 0 -12px 20px rgba(190,190,180,0.12),
+        0 8px 20px rgba(90,75,80,0.10);
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+
+/* glass highlight on the left */
+
+.jar::before {
+    content: "";
+
+    position: absolute;
+
+    left: 16px;
+    top: 35px;
+
+    width: 12px;
+    height: 275px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.32);
+
+    filter: blur(2px);
+
+    z-index: 30;
+
+    pointer-events: none;
+}
+
+
+/* subtle glass shine */
+
+.jar::after {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    right: 25px;
+
+    width: 35px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.10);
+
+    filter: blur(5px);
+
+    z-index: 30;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   JAR NECK / OPENING
+========================================================= */
+
+.jar-lid {
+    position: absolute;
+
+    left: 50%;
+    top: -20px;
+
+    width: 160px;
+    height: 42px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            180deg,
+            #eda1b0 0%,
+            #eda1b0 100%
+        );
+
+    border: 2px solid rgba(155,145,150,0.45);
+
+    border-radius: 9px;
+
+    box-shadow:
+        inset 0 2px 3px rgba(255,255,255,0.7),
+        0 3px 7px rgba(80,70,75,0.14);
+
+    z-index: 40;
+}
+
+
+/* little glass rim underneath the lid */
+
+.jar-lid::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 155px;
+    height: 14px;
+
+    transform: translateX(-50%);
+
+    border: 2px solid rgba(170,165,168,0.32);
+
+    border-top: none;
+
+    border-radius: 0 0 50% 50%;
+
+    background: rgba(255,255,255,0.12);
+}
+
+
+/* =========================================================
+   JAR BASE
+========================================================= */
+
+.jar-bottom {
+    position: absolute;
+
+    left: 50%;
+    bottom: 28px;
+
+    width: 220px;
+    height: 18px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(180,180,175,0.10);
+
+    filter: blur(2px);
+
+    z-index: 31;
+}
+
+/* =========================================================
+   PAPER PILE
+========================================================= */
+
+.paper {
+    position: absolute;
+
+    width: 105px;
+    height: 42px;
+
+    background: #f8f8dc;
+
+    border: 1px solid #d8d8b9;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 2px 4px rgba(70, 65, 50, 0.12);
+
+    margin-left: -25px;
+}
+
+
+/* Individual pieces */
+
+.paper1 {
+    left: 20px;
+    bottom: 25px;
+    transform: rotate(-12deg);
+}
+
+.paper2 {
+    left: 80px;
+    bottom: 18px;
+    transform: rotate(7deg);
+}
+
+.paper3 {
+    left: 155px;
+    bottom: 25px;
+    transform: rotate(-5deg);
+}
+
+.paper4 {
+    left: 195px;
+    bottom: 35px;
+    transform: rotate(13deg);
+}
+
+.paper5 {
+    left: 45px;
+    bottom: 65px;
+    transform: rotate(4deg);
+}
+
+.paper6 {
+    left: 110px;
+    bottom: 58px;
+    transform: rotate(-9deg);
+}
+
+.paper7 {
+    left: 175px;
+    bottom: 70px;
+    transform: rotate(8deg);
+}
+
+.paper8 {
+    left: 10px;
+    bottom: 95px;
+    transform: rotate(-4deg);
+}
+
+.paper9 {
+    left: 70px;
+    bottom: 105px;
+    transform: rotate(11deg);
+}
+
+.paper10 {
+    left: 140px;
+    bottom: 100px;
+    transform: rotate(-7deg);
+}
+
+.paper11 {
+    left: 205px;
+    bottom: 105px;
+    transform: rotate(5deg);
+}
+
+.paper12 {
+    left: 35px;
+    bottom: 135px;
+    transform: rotate(-10deg);
+}
+
+.paper13 {
+    left: 95px;
+    bottom: 140px;
+    transform: rotate(3deg);
+}
+
+.paper14 {
+    left: 155px;
+    bottom: 135px;
+    transform: rotate(-4deg);
+}
+
+.paper15 {
+    left: 215px;
+    bottom: 145px;
+    transform: rotate(9deg);
+}
+
+.paper16 {
+    left: 60px;
+    bottom: 170px;
+    transform: rotate(6deg);
+}
+
+.paper17 {
+    left: 125px;
+    bottom: 165px;
+    transform: rotate(-8deg);
+}
+
+.paper18 {
+    left: 185px;
+    bottom: 175px;
+    transform: rotate(4deg);
+}
+
+
+/* =========================================================
+   PAPER BEING PULLED OUT
+========================================================= */
+
+.pulled-paper {
+    position: absolute;
+
+    left: 50%;
+    bottom: 125px;
+
+    width: 82px;
+    height: 42px;
+
+    transform:
+        translateX(-50%)
+        rotate(-6deg);
+
+    background: #fff8e8;
+
+    border: 1px solid #d8c9aa;
+
+    box-shadow:
+        0 4px 9px rgba(70, 60, 50, 0.18);
+
+    opacity: 0;
+
+    /*
+       Important:
+       The paper sits above the jar body so it can
+       emerge from the opening.
+    */
+    z-index: 22;
+
+    pointer-events: none;
+}
+
+
+/* Pull animation */
+
+.pulled-paper.pull-out {
+    animation:
+        pullPaperOut 1.1s cubic-bezier(.4, 0, .2, 1)
+        forwards;
+}
+
+
+@keyframes pullPaperOut {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -150px)
+            rotate(-8deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    45% {
+        transform:
+            translate(-50%, -250px)
+            rotate(5deg);
+    }
+
+    75% {
+        transform:
+            translate(-50%, -350px)
+            rotate(-3deg);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -367px)
+            rotate(4deg);
+    }
+}
+
+
+/* Paper going back into jar */
+
+.pulled-paper.hide-paper {
+    animation:
+        paperBackIn 0.5s ease-in
+        forwards;
+}
+
+
+@keyframes paperBackIn {
+
+    0% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -380px)
+            rotate(4deg);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -150px)
+            rotate(-8deg);
+    }
+}
+
+
+/* =========================================================
+   CLICK INSTRUCTION
+========================================================= */
+
+.jar-instruction {
+    margin-top: -70px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-style: italic;
+
+    color: #6e6b6d;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   MEMORY OVERLAY
+========================================================= */
+
+.memory-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(82, 70, 78, 0.18);
+
+    backdrop-filter: blur(3px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+
+    z-index: 100;
+}
+
+
+.memory-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================================
+   MEMORY NOTE
+========================================================= */
+
+.memory-note {
+    width: min(520px, 82vw);
+
+    min-height: 280px;
+
+    background: #fff8e8;
+
+    border: 1px solid #d8c9aa;
+
+    box-shadow:
+        0 15px 45px rgba(70, 55, 60, 0.2);
+
+    transform:
+        rotate(-2deg)
+        scale(0.75);
+
+    opacity: 0;
+
+    transition:
+        transform 0.55s cubic-bezier(.2, .8, .2, 1),
+        opacity 0.45s ease;
+
+    position: relative;
+}
+
+
+.memory-overlay.show .memory-note {
+    transform:
+        rotate(-2deg)
+        scale(1);
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   NOTE CONTENT
+========================================================= */
+
+.note-fold {
+    padding: 55px 45px;
+}
+
+
+.note-content {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #625b61;
+
+    text-align: center;
+}
+
+
+.memory-label {
+    margin: 0 0 25px;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #b39fa9;
+}
+
+
+#memoryText {
+    margin: 0 auto 35px;
+
+    max-width: 420px;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    color: #625b61;
+}
+
+
+.note-content button {
+    border: none;
+
+    background: transparent;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #a8949e;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.note-content button:hover {
+    color: #75656d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .memories-page {
+        padding-top: 45px;
+    }
+
+    .memories-page h1 {
+        font-size: 43px;
+    }
+
+    .memories-subtitle {
+        font-size: 20px;
+        margin-bottom: 45px;
+    }
+
+    .memory-jar {
+        transform: scale(0.85);
+    }
+
+    .memory-jar:hover {
+        transform: scale(0.85);
+    }
+
+    .memory-note {
+        width: 88vw;
+    }
+
+    .note-fold {
+        padding: 40px 25px;
+    }
+
+    #memoryText {
+        font-size: 21px;
+    }
+
+}
+
+/* =========================================================
+   OUR FUTURE
+   ========================================================= */
+
+   .future-page {
+    min-height: 100vh;
+    padding: 70px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.future-page h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1;
+
+    color: #080808;
+}
+
+.future-subtitle {
+    margin: 12px 0 50px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+
+    color: #8c8a8b;
+}
+
+
+/* =========================================================
+   FUTURE OPTIONS
+   ========================================================= */
+
+.future-sections {
+    width: 900px;
+    max-width: 90%;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+
+.future-option {
+    position: relative;
+
+    height: 145px;
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(150, 135, 145, 0.22);
+    border-radius: 18px;
+
+    background: rgba(235, 233, 231, 0.72);
+    opacity: 0.6;
+
+    box-shadow:
+        0 4px 12px rgba(100, 80, 90, 0.06);
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* HOVER */
+
+.future-option:hover {
+    transform: translateY(-4px);
+
+    background: rgba(245, 244, 243, 0.9);
+
+    box-shadow:
+        0 8px 20px rgba(100, 80, 90, 0.10);
+}
+
+
+/* ICON */
+
+.future-icon {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 24px;
+    line-height: 1;
+
+    color: #c23a3d;
+
+    transition: transform 0.25s ease;
+}
+
+.future-option:hover .future-icon {
+    transform: translateY(-2px);
+}
+
+
+/* NAME */
+
+.future-name {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 27px;
+    font-weight: 600;
+
+    color: #0c0c0c;
+}
+
+
+/* DESCRIPTION */
+
+.future-description {
+    display: block;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+
+    color: #696768;
+}
+
+
+/* =========================================================
+   FUTURE POPUP
+   ========================================================= */
+
+.future-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(80, 65, 75, 0.18);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+.future-modal.future-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* =========================================================
+   POPUP CONTENT
+   ========================================================= */
+
+   .future-modal-content {
+    position: relative;
+
+    width: min(900px, 90vw);
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 48px 60px 52px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(237, 241, 219, 0.98),
+            rgba(250, 244, 245, 0.97)
+        );
+
+        border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(85, 65, 75, 0.20),
+        0 5px 18px rgba(85, 65, 75, 0.10);
+
+    text-align: center;
+
+    animation: futurePopupIn 0.4s ease forwards;
+}
+
+.future-modal.active .future-modal-content {
+    transform: translateY(0);
+}
+
+/* POPUP TEXT */
+
+.future-writing {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 28px;
+    padding: 28px 34px;
+
+    text-align: left;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    line-height: 1.65;
+
+    color: #777075;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    border: 1px solid rgba(180, 155, 165, 0.18);
+    border-radius: 18px;
+
+    /* IMPORTANT */
+    height: auto;
+    min-height: 0;
+}
+
+.future-modal-icon {
+    font-size: 25px;
+    color: #9b8b92;
+
+    margin-bottom: 4px;
+
+    opacity: 0.75;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   CLOSE X
+   ========================================================= */
+
+   .future-close {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(180, 160, 170, 0.10);
+
+    color: #8c8086;
+
+    font-size: 24px;
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.future-close:hover {
+    background: rgba(180, 160, 170, 0.20);
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   POPUP SCROLLBAR
+   ========================================================= */
+
+.future-modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.future-modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.future-modal-content::-webkit-scrollbar-thumb {
+    background: rgba(150, 135, 145, 0.3);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .future-page {
+        padding: 50px 20px;
+    }
+
+    .future-page h1 {
+        font-size: 48px;
+    }
+
+    .future-subtitle {
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+
+    .future-sections {
+        width: 100%;
+        max-width: 500px;
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .future-option {
+        height: 135px;
+    }
+
+    .future-name {
+        font-size: 26px;
+    }
+
+    .future-modal {
+        padding: 15px;
+    }
+
+    .future-modal-content {
+        padding: 45px 25px 30px;
+    }
+
+    .future-modal-content h2 {
+        font-size: 36px;
+    }
+
+    .future-modal-content p {
+        font-size: 17px;
+    }
+}
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+   .back-button {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    
+    border: 1px solid rgba(170, 150, 160, 0.25);
+    border-radius: 999px;
+    
+    background: rgba(255, 250, 250, 0.65);
+    backdrop-filter: blur(8px);
+    
+    color: #8b777d;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    
+    padding: 9px 16px;
+    
+    cursor: pointer;
+    
+    box-shadow: 0 4px 15px rgba(100, 70, 80, 0.08);
+    
+    transition: all 0.25s ease;
+    
+    z-index: 9999;
+}
+
+.back-button:hover {
+    background: rgba(255, 250, 250, 0.9);
+    transform: translateX(-3px);
+    box-shadow: 0 6px 18px rgba(100, 70, 80, 0.12);
+}

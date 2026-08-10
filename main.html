@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovers</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-page">
+
+        <h1>Lovers</h1>
+
+        <p class="main-subtitle">I love you.</p>
+
+        <!-- TIMER -->
+        <div class="timer">
+            <p class="timer-label">You've been my omega for</p>
+
+            <div class="timer-numbers">
+                <div>
+                    <span id="days">0</span>
+                    <small>days</small>
+                </div>
+
+                <div>
+                    <span id="hours">0</span>
+                    <small>hours</small>
+                </div>
+
+                <div>
+                    <span id="minutes">0</span>
+                    <small>minutes</small>
+                </div>
+
+                <div>
+                    <span id="seconds">0</span>
+                    <small>seconds</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTIONS -->
+        <div class="menu">
+
+            <button onclick="window.location.href='letters.html'">💌<span>Letters</span></button>
+            <button onclick="window.location.href='gallery.html'">📸<span>Gallery</span></button>
+            <button onclick="window.location.href='little-things.html'">🌷<span>Little Things</span></button>
+            <button onclick="window.location.href='memories.html'">🫶<span>Memories</span></button>
+
+            <button onclick="window.location.href='future.html'">✨<span>Our Future</span></button>
+            <button onclick="window.location.href='wheel.html'">🎡<span>Spin the Wheel</span></button>
+            <button onclick="window.location.href='story.html'">🧵<span>Bound by Red Thread</span></button>
+            <button onclick="window.location.href='notepad.html'">📝<span>Our Little Notes</span></button>
+
+        </div>
+
+    </div>
+    <body class="main-body">
+        <div class="hearts">
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+            <span>♡</span>
+        </div>
+   
+        <script>
+            const startDate = new Date("2023-08-11T14:00:00");
+        
+            function updateTimer() {
+                const now = new Date();
+                const difference = now - startDate;
+        
+                const totalSeconds = Math.floor(difference / 1000);
+        
+                const days = Math.floor(totalSeconds / 86400);
+                const hours = Math.floor((totalSeconds % 86400) / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+        
+                document.getElementById("days").textContent = days;
+                document.getElementById("hours").textContent = hours;
+                document.getElementById("minutes").textContent = minutes;
+                document.getElementById("seconds").textContent = seconds;
+            }
+        
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        </script>   
+</body>
+</html>

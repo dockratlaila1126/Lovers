@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letters</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#f8e7eb">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+</head>
+
+<body class="main-body">
+
+    <button class="back-button" onclick="history.back()">← back</button>
+
+    <div class="hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+    </div>
+
+    <div class="letters-page">
+
+        <h1>Letters</h1>
+
+        <p class="letters-subtitle">
+            I'm always with you, princess.
+        </p>
+
+        <div class="letters-grid">
+
+            <button class="letter-card" onclick="openLetter('miss-me')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open when you miss me</span>
+                <span class="letter-description">For the days you wish I were there.</span>
+            </button>
+
+            <button class="letter-card" onclick="openLetter('sad')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open when you're sad</span>
+                <span class="letter-description">Mommy will cheer you up.</span>
+            </button>
+
+            <button class="letter-card" onclick="openLetter('mad')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open when you're mad at me</span>
+                <span class="letter-description">You're probably gonna use this one a lot.</span>
+            </button>
+
+            <button class="letter-card" onclick="openLetter('sleep')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open when you can't sleep</span>
+                <span class="letter-description">Let's dream of each other.</span>
+            </button>
+
+            <button class="letter-card" onclick="openLetter('reassurance')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open when you need reassurance</span>
+                <span class="letter-description">Just in case you forget.</span>
+            </button>
+
+            <button class="letter-card" onclick="openLetter('insecure')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open when you're insecure</span>
+                <span class="letter-description">For when you don't feel comfortable in your own skin.</span>
+            </button>
+
+            <button class="letter-card" onclick="openLetter('motivation')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open when you need motivation</span>
+                <span class="letter-description">I'm always your no. 1 supporter.</span>
+            </button>
+
+            <button class="letter-card" onclick="openLetter('whenever')">
+                <span class="letter-icon">♡</span>
+                <span class="letter-title">Open whenever you want</span>
+                <span class="letter-description">No reason needed.</span>
+            </button>
+
+        </div>
+    
+    </div>
+
+    <script>
+        function openLetter(letter) {
+            const overlay = document.getElementById("letter-overlay");
+            const heading = document.getElementById("letter-heading");
+            const content = document.getElementById("letter-content");
+
+
+            if (letter === "miss-me") {
+    heading.textContent = "Open when you miss me";
+    content.innerHTML = `
+    <p>so you miss me huh :(
+
+well unfortunately for you, i’m not actually there right now. BUTTTT for the sake of this letter, pretend i am.
+
+we're lying in your bed right now. you’ll probably tell me to come closer, so obviously i will.
+
+you'll have your head on my tiddies and eventually you’ll get tired and i’ll tell you to go to sleep. 
+
+i’ll probably stay awake for a little while just looking at you because i’m cringe like that.
+
+then i’ll kiss your forehead and go to sleep with you.
+
+so if you miss me right now, just imagine that.
+
+i’m there. i’m cuddling you. i’m annoying you.
+
+i love you baby. now stop missing me so much :(</p>
+`;
+            }
+
+if (letter === "sad") {
+    heading.textContent = "Open when you're sad";
+    content.innerHTML = `
+        <p>i know whatever happened probably feels like a lot right now, but you don't have to have everything figured out right now. you don't have to pretend you're okay when you're not.
+
+you can just be sad.
+
+if i was there right now, i'd probably hug you until you complain about me suffocating you. then i'd probably start making stupid jokes.
+
+actually wait.
+
+why did the tomato turn red?
+
+because it saw the salad dressing.
+
+i'm sorry.
+
+that was fucking awful.
+
+anyway.
+
+whatever is making you sad right now won't last forever.
+
+you can cry. you can complain. you can be angry. you can be quiet.
+
+i'll still love you through all of it.
+
+everything is gonna be okay.</p>
+    `;
+}
+
+if (letter === "mad") {
+    heading.textContent = "Open when you're mad at me";
+    content.innerHTML = `
+        <p>i'm sorry.
+
+i'm stupid.
+
+sometimes i do things that hurt you or piss you off and i don't even realize how badly i've fucked up until later.
+
+i'm probably sitting here thinking about whatever happened and trying to understand exactly where i went wrong.
+
+and if i'm still too stupid to see it right now, then give me some time.
+
+sometimes my brain takes long to arrive at the obvious conclusion.
+
+eventually i'll realize what i did wrong.
+
+and when i do, i'll come back to you.
+
+i'll apologize properly. i'll listen. i'll try to understand you instead of just trying to defend myself.
+
+so i'm sorry, baby.
+
+even if we're mad at each other right now, i still love you.
+
+once again, i'm really sorry. </p>
+    `;
+}
+
+if (letter === "sleep") {
+    heading.textContent = "Open when you can't sleep";
+    content.innerHTML = `
+        <p>imagine we're somewhere else.
+
+you can choose.
+
+we could be in Japan, walking around at night.
+
+we could be in some little cabin surrounded by snow.
+
+we could be at the beach, watching the sunset.
+
+we could be in our giant mansion with our billion animals running around everywhere.
+
+or maybe we're just lying in bed together.
+
+maybe you can imagine me reading you a story.
+
+just pretend i'm lying beside you, quietly reading while you're slowly falling asleep.
+
+you don't need to think about tomorrow.
+
+you don't need to think about anything that's bothering you.
+
+just dream (about me preferably).
+
+goodnight, baby.
+
+i'll see you in our little dream world. ♡</p>
+    `;
+}
+
+if (letter === "reassurance") {
+    heading.textContent = "Open when you need reassurance";
+    content.innerHTML = `
+        <p>i don't think i tell you enough how much i love you.
+
+i know sometimes i don't show it properly.
+
+sometimes i get caught up in my own head. sometimes i get frustrated. sometimes i don't say what i'm feeling. sometimes i probably make you wonder if i care as much as i say i do.
+
+but i do.
+
+so much.
+
+i care about you when we're happy, when we're arguing, when you're sad.
+
+i care about the little things you tell me.
+
+i care about your stupid little stories and your random thoughts and the things you get excited about.
+
+you don't have to earn my love by being perfect.
+
+you don't have to always be happy.
+
+you don't have to be anything other than yourself.
+
+i love you because you're you.</p>
+    `;
+}
+
+if (letter === "insecure") {
+    heading.textContent = "Open when you're insecure";
+    content.innerHTML = `
+        <p>respectfully...
+
+what the fuck are you insecure about?
+
+have you looked at yourself???
+
+you're so fucking pretty.
+
+your face, your eyes, your smile, your hair, your body, literally everything.
+
+and yes, you're sexy too. very.
+
+but it's not even just about how you look.
+
+i love the way you laugh, the way you talk, your personality, your weirdness.
+
+you could wake up with messy hair, looking like you got hit by a truck, and i'd still want to kiss you.
+
+actually, especially then.
+
+so please don't let your brain convince you that you're anything less than the girl i see.
+
+because when i look at you, i see someone perfect.
+
+now stop being mean to my pretty girl.</p>
+    `;
+}
+
+if (letter === "motivation") {
+    heading.textContent = "Open when you need motivation";
+    content.innerHTML = `
+        <p>
+
+i know you're probably doubting yourself right now, but i need you to remember who you are.
+
+you've made it this far.
+
+whatever you're dealing with right now, you've already survived every bad day that came before it.
+
+and i know you're going to give this everything you've got.
+
+you just have to try.
+
+and if you fuck up?
+
+we try again.
+
+if it doesn't work the first time?
+
+we try again.
+
+if you're tired?
+
+rest.
+
+then we try again.
+
+i'm proud of you already.
+
+not because of whether you succeed or fail, but because i know you're going to give it your all.
+
+and i'll be right here cheering you on the whole time.♡</p>
+    `;
+}
+
+if (letter === "whenever") {
+    heading.textContent = "Open whenever you want";
+    content.innerHTML = `
+        <p>there's no special reason for this one.
+
+you just wanted to open it.
+
+so here i am.
+
+i love you.
+
+that's it.
+
+that's the letter.
+
+...
+
+okay fine, i'll elaborate.
+
+i love you.
+
+i love you when you're angry at me.
+
+i love you when you're being cute.
+
+i love you when you're half asleep.
+
+i love you when we're doing absolutely nothing.
+
+i love you on the boring days.
+
+i love you on the exciting days.
+
+i love you today.
+
+and i'll love you tomorrow.
+
+and the day after that.
+
+and all the random days in between.
+
+so whenever you open this, just remember that there's a girl who loves you very very much.
+
+and unfortunately for you, you're stuck with her.
+
+i love you, my princess. ♡</p>
+    `;
+}
+
+content.innerHTML = `
+    <p class="letter-greeting">
+        My love,
+    </p>
+
+    ${content.innerHTML}
+
+    <p class="letter-signature">
+        With all my love,<br>
+        Mommy ♡
+    </p>
+`;
+            overlay.classList.add("show");
+        }
+
+        function openEnvelope(event) {
+    event.stopPropagation();
+
+    document
+        .querySelector(".envelope")
+        .classList.add("open");
+}
+
+function closeLetter() {
+    document.getElementById("letter-overlay").classList.remove("show");
+
+    const envelope = document.querySelector(".envelope");
+
+    if (envelope) {
+        envelope.classList.remove("open");
+    }
+}
+    </script>
+
+<div id="letter-overlay" class="letter-overlay">
+
+    <div class="letter-popup">
+
+        <button class="close-letter" onclick="closeLetter()">×</button>
+    
+        <div class="envelope-stage">
+    
+            <div class="envelope">
+    
+                <!-- The actual letter -->
+                <div class="envelope-letter">
+                    <div class="letter-paper">
+                        <h2 id="letter-heading"></h2>
+                        <div id="letter-content"></div>
+                    </div>
+                </div>
+    
+                <!-- Envelope -->
+                <div class="envelope-back"></div>
+    
+                <div class="envelope-pocket"></div>
+    
+                <div class="envelope-flap"></div>
+    
+                <button
+                    class="envelope-seal"
+                    onclick="openEnvelope(event)"
+                    aria-label="Open letter"
+                >
+                    ♡
+                </button>
+    
+            </div>
+    
+            <p class="envelope-hint">Tap the seal to open your letter ♡</p>
+    
+        </div>
+    
+    </div>
+
+</div>
+
+</body>
+</html>

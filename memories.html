@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="main-body">
+
+    <!-- HEART BACKGROUND -->
+
+    <div class="hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+    </div>
+
+
+    <!-- MEMORIES PAGE -->
+
+    <main class="memories-page">
+
+        <button class="back-button" onclick="history.back()">← back</button>
+
+        <h1>Our Memories ♡</h1>
+
+        <p class="memories-subtitle">
+            Us through the years
+        </p>
+
+
+        <!-- MEMORY JAR -->
+
+        <div class="memory-jar" onclick="openMemory()">
+
+            <div class="jar-lid"></div>
+
+            <div class="jar">
+
+                <div class="paper paper1"></div>
+                <div class="paper paper2"></div>
+                <div class="paper paper3"></div>
+                <div class="paper paper4"></div>
+                <div class="paper paper5"></div>
+                <div class="paper paper6"></div>
+                <div class="paper paper7"></div>
+                <div class="paper paper8"></div>
+                <div class="paper paper9"></div>
+                <div class="paper paper10"></div>
+                <div class="paper paper11"></div>
+                <div class="paper paper12"></div>
+                <div class="paper paper13"></div>
+                <div class="paper paper14"></div>
+                <div class="paper paper15"></div>
+                <div class="paper paper16"></div>
+                <div class="paper paper17"></div>
+                <div class="paper paper18"></div>
+
+            </div>
+
+            <div class="pulled-paper" id="pulledPaper"></div>
+
+        </div>
+
+
+        <p class="jar-instruction">
+            click the jar ♡
+        </p>
+
+
+        <!-- MEMORY POPUP -->
+
+        <div class="memory-overlay" id="memoryOverlay">
+
+            <div class="memory-note" id="memoryNote">
+
+                <div class="note-fold">
+
+                    <div class="note-content">
+
+                        <p class="memory-label">
+                           ♡ Do you remember...
+                        </p>
+
+                        <p id="memoryText"></p>
+
+                        <button onclick="closeMemory()">
+                            fold it away ♡
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const memories = [
+
+            "Our first date watching Miraculous and kissing every time they sang.",
+
+            "You peer pressuring me into being your girlfriend lol.",
+
+            "You giving me the Felix photocard for my birthday.",
+
+            "Me giving you Wormy.",
+
+            "Me stalking you at Gateway when you went to watch Barbie.",
+
+            "You coming to my house, watching Annabelle, playing pool and meeting my whole family.",
+
+            "Us going out with Ahmad and his cousins, and taking that picture of us holding hands which was your wallpaper for quite a while.",
+
+            "You feeding me nuggets when I was kinda high for the very first time.",
+
+            "The mint chocolate you gave me with 'I love you' written on it.",
+
+            "Me making you chocolate-covered strawberries. I kinda sucked at that.",
+
+            "Me walking you to Bio because I wanted to spend as much time as I could with you.",
+
+            "Us writing notes to each other when we were in different classes.",
+
+            "All the movies we watched together.",
+
+            "The Hunger Games...",
+
+            "The Creator — the first time things between us got a little more freakyyy.",
+
+            "Us sitting on the stairs during break while I barked at little kids.",
+
+            "You pinching me. A LOT.",
+
+            "All our moments in the school bathrooms.",
+
+            "The fun walk and the beach, where I fell in love with you.",
+
+            "Us getting those green popsicles from the tuck shop and waiting outside for our mothers to fetch us.",
+
+            "When you put gifts in my locker for Valentine's Day. You creep.",
+
+            "When we went out after school to KFC.",
+
+            "When we went to Barn Owl.",
+
+            "When we went to the botanical gardens.",
+
+            "Our Roblox avatars getting freaky in Giga Mansion Tycoon while we also somehow managed to have fights in the chat constantly lmao.",
+
+            "Playing Buckshot Mayhem, where the winner got to decide what we would do for the night.",
+
+            "Ribby's party, where we were mad at each other but still kept staring at each other.",
+
+            "When I gave you the 'Laila's bitch' bracelet lol.",
+
+            "All the times I came to your house.",
+
+            "Planning our future and deciding on the names of our 45 kids.",
+
+            "You describing the mansion you want, with the disappearing pool and hidden tennis court.",
+
+            "When we went to Pav and my mother was absolutely blowing up your phone LMAO.",
+
+            "Strap…",
+
+            "Us slow dancing together at GMS. I really liked that."
+
+        ];
+
+
+        /*
+         * Make a separate copy of the memories.
+         * Once a memory is shown, it is removed from
+         * this list so it cannot appear again.
+         */
+
+        let remainingMemories = [...memories];
+
+
+        function openMemory() {
+
+const overlay =
+    document.getElementById("memoryOverlay");
+
+const memoryText =
+    document.getElementById("memoryText");
+
+const pulledPaper =
+    document.getElementById("pulledPaper");
+
+
+/* Reset paper */
+
+pulledPaper.classList.remove("pull-out");
+pulledPaper.classList.remove("hide-paper");
+
+
+/* Force animation to restart */
+
+void pulledPaper.offsetWidth;
+
+
+/* Pull paper out */
+
+pulledPaper.classList.add("pull-out");
+
+
+/* Choose a memory without repeats */
+
+if (remainingMemories.length === 0) {
+
+    remainingMemories = [...memories];
+
+}
+
+
+const randomIndex =
+    Math.floor(
+        Math.random() *
+        remainingMemories.length
+    );
+
+
+const selectedMemory =
+    remainingMemories.splice(
+        randomIndex,
+        1
+    )[0];
+
+
+memoryText.textContent =
+    selectedMemory;
+
+
+/*
+ * Wait for the paper to come out
+ * before opening the memory.
+ */
+
+setTimeout(function() {
+
+    overlay.classList.add("show");
+
+}, 950);
+
+}
+
+function closeMemory() {
+
+const overlay =
+    document.getElementById("memoryOverlay");
+
+const pulledPaper =
+    document.getElementById("pulledPaper");
+
+
+overlay.classList.remove("show");
+
+
+/*
+ * Send the paper back into the jar.
+ */
+
+pulledPaper.classList.remove("pull-out");
+
+void pulledPaper.offsetWidth;
+
+pulledPaper.classList.add("hide-paper");
+
+
+setTimeout(function() {
+
+    pulledPaper.classList.remove("hide-paper");
+
+}, 500);
+
+}
+
+    </script>
+
+</body>
+
+</html>

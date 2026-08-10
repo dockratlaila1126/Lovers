@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel ♡</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #e8aeb8;
+            font-family: Georgia, serif;
+            color: #5d4a4d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wheel-page {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            margin: 0 0 8px;
+        }
+
+        .subtitle {
+            font-style: italic;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .wheel-container {
+            position: relative;
+            width: 420px;
+            height: 420px;
+            margin: 0 auto 30px;
+        }
+
+        .wheel {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    border: 8px solid #fffaf5;
+    position: relative;
+    overflow: hidden;
+    transition: transform 5s cubic-bezier(0.12, 0.8, 0.15, 1);
+    box-shadow: 0 10px 30px rgba(80, 50, 50, 0.15);
+
+    background: conic-gradient(
+        #e8b6bd 0deg 45deg,
+        #f7efd9 45deg 90deg,
+        #e8b6bd 90deg 135deg,
+        #f7efd9 135deg 180deg,
+        #e8b6bd 180deg 225deg,
+        #f7efd9 225deg 270deg,
+        #e8b6bd 270deg 315deg,
+        #f7efd9 315deg 360deg
+    );
+}
+     
+        .wheel-label {
+    position: absolute;
+    width: 105px;
+    left: 50%;
+    top: 50%;
+    transform-origin: center center;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+/* Position each prize in its own slice */
+
+.wheel-label:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(22.5deg) translateY(-145px);
+}
+
+.wheel-label:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(67.5deg) translateY(-145px);
+}
+
+.wheel-label:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(112.5deg) translateY(-145px);
+}
+
+.wheel-label:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(157.5deg) translateY(-145px);
+}
+
+.wheel-label:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(202.5deg) translateY(-145px);
+}
+
+.wheel-label:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(247.5deg) translateY(-145px);
+}
+
+.wheel-label:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(292.5deg) translateY(-145px);
+}
+
+.wheel-label:nth-child(8) {
+    transform: translate(-50%, -50%) rotate(337.5deg) translateY(-145px);
+}
+
+
+        .pointer {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-top: 35px solid #b86f7c;
+            z-index: 10;
+        }
+
+        .spin-button {
+            border: none;
+            background: #b86f7c;
+            color: white;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            padding: 14px 40px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(80, 50, 50, 0.2);
+        }
+
+        .spin-button:hover {
+            transform: scale(1.05);
+        }
+
+        .spin-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #result {
+            margin-top: 25px;
+            font-size: 24px;
+            min-height: 35px;
+        }
+
+        @media (max-width: 500px) {
+            .wheel-container,
+            .wheel {
+                width: 330px;
+                height: 330px;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+    </div>
+
+    <div class="wheel-page">
+
+        <button class="back-button" onclick="history.back()">← back</button>
+
+        <h1>Spin the Wheel ♡</h1>
+
+        <div class="subtitle">
+            Goodluck lil girl...
+        </div>
+
+        <div class="wheel-container">
+
+            <div class="pointer"></div>
+
+            <div class="wheel" id="wheel">
+
+                <div class="wheel-label">Date of<br>your choice</div>
+                <div class="wheel-label">One handwritten<br>letter</div>
+                <div class="wheel-label">Laila plans<br>next date</div>
+                <div class="wheel-label">Laila owes<br>you R100</div>
+                <div class="wheel-label">You choose<br>what we do tonight</div>
+                <div class="wheel-label">Unreasonable<br>request</div>
+                <div class="wheel-label">Nudes</div>
+                <div class="wheel-label">One rule<br>for 24 hours</div>
+
+            </div>
+
+        </div>
+
+        <button class="spin-button" onclick="spinWheel()">
+            SPIN ♡
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+const prizes = [
+    "Date of your choice",
+    "One handwritten letter",
+    "Laila plans next date",
+    "Laila owes you R100",
+    "You choose what we do tonight",
+    "Unreasonable request",
+    "Nudes",
+    "One rule for 24 hours"
+];
+
+        let currentRotation = 0;
+
+        function spinWheel() {
+
+            const wheel = document.getElementById("wheel");
+            const button = document.querySelector(".spin-button");
+            const result = document.getElementById("result");
+
+            button.disabled = true;
+            result.textContent = "";
+
+            const weights = prizes.map(prize => prize.includes("R100") ? 0.5 : 1);
+
+const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
+let random = Math.random() * totalWeight;
+
+let winner = 0;
+
+for (let i = 0; i < prizes.length; i++) {
+    random -= weights[i];
+
+    if (random <= 0) {
+        winner = i;
+        break;
+    }
+}
+
+            const segmentSize = 360 / prizes.length;
+
+            const targetAngle =
+                360 - (winner * segmentSize + segmentSize / 2);
+
+            const extraSpins = 360 * 6;
+
+            currentRotation += extraSpins + targetAngle - (currentRotation % 360);
+
+            wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+            setTimeout(() => {
+
+result.textContent = `You got: ${prizes[winner]} ♡`;
+
+localStorage.setItem("lastSpin", Date.now());
+
+updateSpinLock();
+
+}, 5000);
+        }
+
+const SPIN_COOLDOWN = 24 * 60 * 60 * 1000;
+
+function updateSpinLock() {
+    const button = document.querySelector(".spin-button");
+
+    const lastSpin = localStorage.getItem("lastSpin");
+
+    // No previous spin = unlocked
+    if (!lastSpin) {
+        button.disabled = false;
+        button.textContent = "SPIN ♡";
+        return;
+    }
+
+    const unlockTime = Number(lastSpin) + SPIN_COOLDOWN;
+    const remaining = unlockTime - Date.now();
+
+    // 24 hours have passed
+    if (remaining <= 0) {
+        localStorage.removeItem("lastSpin");
+
+        button.disabled = false;
+        button.textContent = "SPIN ♡";
+        return;
+    }
+
+    // Still locked — show countdown
+    button.disabled = true;
+
+    const hours = Math.floor(remaining / (1000 * 60 * 60));
+
+    const minutes = Math.floor(
+        (remaining % (1000 * 60 * 60)) / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (remaining % (1000 * 60)) / 1000
+    );
+
+    button.textContent =
+        "🔒 " +
+        String(hours).padStart(2, "0") + ":" +
+        String(minutes).padStart(2, "0") + ":" +
+        String(seconds).padStart(2, "0");
+}
+
+// Update the countdown every second
+setInterval(updateSpinLock, 1000);
+
+// Check immediately when the page loads
+updateSpinLock();
+
+    </script>
+
+</body>
+</html>
