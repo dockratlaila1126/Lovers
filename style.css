@@ -1548,7 +1548,40 @@ button:hover {
 
     .envelope.open .envelope-letter {
         transform: translateY(-75%) !important;
-        z-index: 10 !important;
+        z-index: 3 !important;
+    }
+}
+
+.letter-paper h2,
+#letter-heading {
+    display: block !important;
+    width: 80% !important;
+    max-width: 80% !important;
+    margin: 0 auto 18px auto !important;
+
+    text-align: center !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+
+    line-height: 1.15 !important;
+}
+
+@media (max-width: 600px) {
+    .letter-paper h2,
+    #letter-heading {
+        width: 82% !important;
+        max-width: 82% !important;
+        font-size: 1.4rem !important;
+        line-height: 1.15 !important;
+        text-align: center !important;
+        white-space: normal !important;
+    }
+
+    .envelope.open .envelope-letter {
+        transform: translateY(-65%) !important;
+        z-index: 3 !important;
     }
 }
 
