@@ -857,7 +857,7 @@ button:hover {
     position: absolute;
 
     left: 5%;
-    bottom: 0%;
+    bottom: 18%;
 
     width: 90%;
     height: 88%;
@@ -889,6 +889,7 @@ button:hover {
 
 .letter-paper h2 {
     margin: 0 0 18px;
+    padding: 0 8px;
 
     text-align: center;
 
@@ -898,7 +899,15 @@ button:hover {
 
     font-weight: 500;
 
+    line-height: 1.15;
+
     color: #4b3d3d;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+
+    word-break: normal;
 }
 
 /* Remove the decorative popup heart from this heading */
@@ -1049,7 +1058,9 @@ button:hover {
     }
 
     .letter-paper h2 {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
+        line-height: 1.2;
+        white-space: normal;
     }
 
     .letter-paper #letter-content {
