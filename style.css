@@ -749,14 +749,15 @@ button:hover {
 .close-letter {
     position: absolute;
 
-    top: 14px;
-    right: 18px;
+    top: 12px;
+    right: 12px;
 
-    padding: 2px 6px;
+    padding: 0;
 
-    background: transparent;
+    background: #f6e5df;
 
     border: none;
+    border-radius: 50%;
 
     box-shadow: none;
 
