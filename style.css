@@ -1435,7 +1435,7 @@ button:hover {
 }
 
 .letter-paper .letter-signature {
-    margin-top: 150px !important;
+    margin-top: 100px !important;
     font-size: 0.80rem !important;
 }
 
@@ -1479,7 +1479,7 @@ button:hover {
         transform: scale(0.42);
         transform-origin: top center;
         margin-bottom: -340px;
-        margin-top: 140px;
+        margin-top: 180px;
     }
 
     #book-wrapper {
