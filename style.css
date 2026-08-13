@@ -1568,22 +1568,31 @@ button:hover {
     line-height: 1.15 !important;
 }
 
-/* ===== FIX LETTER CONTAINER ===== */
+/* ===== FINAL ENVELOPE POSITIONING ===== */
 
-.envelope.open {
-    overflow: visible !important;
+.envelope-letter {
+    height: 88% !important;
+    bottom: 0 !important;
+    z-index: 0 !important;
 }
 
-.envelope.open .envelope-letter {
+.letter-paper {
     height: 120% !important;
-    bottom: -20% !important;
-    transform: translateY(-65%) !important;
+    box-sizing: border-box !important;
+}
+
+/* When opened, the paper rises behind the pouch */
+.envelope.open .envelope-letter {
+    transform: translateY(-48%) !important;
     z-index: 3 !important;
 }
 
-.envelope.open .letter-paper {
-    height: 100% !important;
-    overflow: visible !important;
+.envelope.open .envelope-pocket {
+    z-index: 4 !important;
+}
+
+.envelope.open .envelope-flap {
+    z-index: 5 !important;
 }
 
 @media (max-width: 600px) {
