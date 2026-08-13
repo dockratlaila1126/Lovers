@@ -1108,13 +1108,13 @@ button:hover {
 /* flap moves behind the letter once opened */
 .envelope.open .envelope-flap {
     transform: rotateX(180deg);
-    z-index: 0;
+    z-index: 1;
 }
 
 /* paper stays behind the pocket and physically rises */
 .envelope.open .envelope-letter {
-    transform: translateY(-65%);
-    z-index: 6;
+    transform: translateY(-45%);
+    z-index: 3;
 }
 
 /* Remove the white popup behind the envelope */
