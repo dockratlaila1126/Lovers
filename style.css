@@ -1510,6 +1510,48 @@ button:hover {
     }
 }
 
+/* ===== FINAL LETTER FIX ===== */
+
+#letter-heading {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    line-height: 1.15 !important;
+}
+
+/* Make the opened letter rise properly */
+.envelope.open .envelope-letter {
+    transform: translateY(-75%) !important;
+    z-index: 10 !important;
+}
+
+/* Keep the actual paper inside the envelope width */
+.envelope-letter .letter-paper {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #letter-heading {
+        font-size: 1.4rem !important;
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        line-height: 1.15 !important;
+        padding: 0 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    .envelope.open .envelope-letter {
+        transform: translateY(-75%) !important;
+        z-index: 10 !important;
+    }
+}
+
 /* =========================
    GALLERY
 ========================= */
