@@ -865,7 +865,7 @@ button:hover {
     z-index: 0;
 
     pointer-events: none;
-    overflow: hidden;
+
 }
 
 .letter-paper {
@@ -1348,6 +1348,12 @@ button:hover {
     left: 2%;
 }
 
+/* Hide the full letter while the envelope is closed */
+.envelope:not(.open) .letter-paper {
+    max-height: 100%;
+    overflow: hidden;
+}
+
 .letter-paper {
     padding-top: 10px;
 }
@@ -1405,7 +1411,7 @@ button:hover {
 }
 
 .letter-paper .letter-signature {
-    margin-top: 90px !important;
+    margin-top: 100px !important;
     font-size: 0.85rem !important;
 }
 
