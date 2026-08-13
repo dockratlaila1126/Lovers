@@ -892,7 +892,6 @@ button:hover {
 
 .letter-paper h2 {
     margin: 0 0 18px;
-    padding: 0 8px;
 
     text-align: center;
 
@@ -902,15 +901,15 @@ button:hover {
 
     font-weight: 500;
 
-    line-height: 1.15;
-
     color: #4b3d3d;
 
     white-space: normal;
 
     overflow-wrap: break-word;
 
-    word-break: normal;
+    word-wrap: break-word;
+
+    max-width: 100%;
 }
 
 /* Remove the decorative popup heart from this heading */
@@ -1061,9 +1060,12 @@ button:hover {
     }
 
     .letter-paper h2 {
-        font-size: 1.25rem;
-        line-height: 1.2;
+        font-size: 1.4rem;
+        line-height: 1.15;
         white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        max-width: 100%;
     }
 
     .letter-paper #letter-content {
@@ -1111,8 +1113,8 @@ button:hover {
 
 /* paper stays behind the pocket and physically rises */
 .envelope.open .envelope-letter {
-    transform: translateY(-45%);
-    z-index: 3;
+    transform: translateY(-65%);
+    z-index: 6;
 }
 
 /* Remove the white popup behind the envelope */
