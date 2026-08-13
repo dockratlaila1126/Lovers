@@ -869,7 +869,7 @@ button:hover {
 
 .letter-paper {
     width: 100%;
-    height: 100%;
+    height: auto;
 
     box-sizing: border-box;
 
@@ -879,7 +879,7 @@ button:hover {
 
     border-radius: 4px;
 
-    overflow: hidden;
+    overflow: visible;
 
     color: #4b3d3d;
 }
@@ -1479,7 +1479,7 @@ button:hover {
         transform: scale(0.42);
         transform-origin: top center;
         margin-bottom: -340px;
-        margin-top: 70px;
+        margin-top: 140px;
     }
 
     #book-wrapper {
