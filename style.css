@@ -1097,7 +1097,7 @@ button:hover {
 
 /* paper stays behind the pocket and physically rises */
 .envelope.open .envelope-letter {
-    transform: translateY(-45%);
+    transform: translateY(-65%);
     z-index: 3;
 }
 
