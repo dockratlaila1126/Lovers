@@ -873,7 +873,7 @@ button:hover {
 
 .letter-paper {
     width: 100%;
-    height: 120%;
+    height: 145%;
 
     box-sizing: border-box;
 
@@ -1583,7 +1583,7 @@ button:hover {
 
 /* When opened, the paper rises behind the pouch */
 .envelope.open .envelope-letter {
-    transform: translateY(-48%) !important;
+    transform: translateY(-5%) !important;
     z-index: 3 !important;
 }
 
