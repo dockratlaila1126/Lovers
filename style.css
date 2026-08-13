@@ -865,6 +865,7 @@ button:hover {
     z-index: 0;
 
     pointer-events: none;
+    overflow: hidden;
 }
 
 .letter-paper {
